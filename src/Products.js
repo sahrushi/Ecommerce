@@ -3,11 +3,11 @@ import { Row, Col, Input, Button } from "antd";
 import items from "./items";
 import Item from "./Item";
 import { useParams } from "react-router-dom";
-import { CartContext } from "./App";
+import { CartContext } from "../src/App";
 
 const { Search } = Input;
 
-function Products(props) {
+function Products() {
   let { id } = useParams();
 
   const [products, setProducts] = useState([]);
@@ -33,6 +33,7 @@ function Products(props) {
   };
 
   const addToCart = (item) => {
+    console.log("Item:", item)
     setCart((prevCart) => {
       const existingItemIndex = prevCart.findIndex(
         (cartItem) => cartItem.id === item.id

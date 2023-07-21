@@ -19,7 +19,7 @@ function TopHeader() {
   };
   const handleRemove = (item) => {
     const index = cart.findIndex((cartItem) => cartItem.id === item.id);
-    const updatedCart = cart;
+    const updatedCart = [...cart];
     updatedCart.splice(index, 1);
     setCart(updatedCart);
   };
@@ -45,11 +45,12 @@ function TopHeader() {
             backgroundColor: "white",
             border: "0px",
             paddingRight: "30px",
+            paddingLeft: "340px"
           }}
         >
           <Badge count={cart.length}>
             <ShoppingCartOutlined
-              style={{ fontSize: "30px", paddingLeft: "340px" }}
+              style={{ fontSize: "30px"}}
             />
           </Badge>
         </button>

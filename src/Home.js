@@ -4,7 +4,6 @@ import Vegetables from "./Carousel/Vegetables";
 import Fruits from "./Carousel/Fruits";
 import Dairy from "./Carousel/Dairy";
 import Beverages from "./Carousel/Beverages";
-
 function Home() {
     return (
         <div>

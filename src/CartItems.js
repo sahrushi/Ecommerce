@@ -24,9 +24,11 @@ function CartItems(props) {
       setQuan((quan) => quan - 1);
       if (quan - 1 === 0) {
         handleRemove(item);
+        setQuan(itemInfo.quantity)
       }
     }
   };
+  
   return (
     <div>
       <Card>
@@ -42,7 +44,7 @@ function CartItems(props) {
               </Col>
               <Col>
                 <h1 style={{ fontSize: "14px" }}>{itemInfo.title}</h1>
-                <h5>Rs: {disPrice}</h5>
+                <h5>Rs: {disPrice*quan}</h5>
               </Col>
             </Row>
           </Col>
