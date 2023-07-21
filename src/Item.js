@@ -24,6 +24,7 @@ function Item(props) {
   const addOrDelCart = (item) => {
     const updatedItem = { ...item, quantity: quan };
     props.addToCart(updatedItem);
+    setQuan(1)
   };
 
   const handleIncrement = () => {
